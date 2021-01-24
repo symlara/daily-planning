@@ -6,4 +6,4 @@ This calendar application runs in the browser and is used to allow users to see 
 Each event can be edited and then you can click the save button once your new event is added.
 
 Here's a screenshot of the application in the browser:
-![daily planing](./Assets/daily-planning-calendar.png)
+![daily planing](./assets/daily-planning-calendar.png)
