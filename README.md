@@ -7,3 +7,5 @@ Each event can be edited and then you can click the save button once your new ev
 
 Here's a screenshot of the application in the browser:
 ![daily planing](./assets/daily-planning-calendar.png)
+
+https://symlara.github.io/daily-planning/
