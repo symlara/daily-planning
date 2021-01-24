@@ -1,4 +1,6 @@
-var task = [];
+var task = [
+    "Work Meeting, Learn Bootstrap, School Work, Meeting, Log off"
+];
 
 var date = moment().format("dddd, MMMM D");
 console.log(date);
@@ -20,7 +22,7 @@ var ItemEl = $("<div>").addClass("group-item");
 
 
 // jquery that tells the 'task' input section to change the text when it's clicked
-$(".group-item").on("click", "p", function() {
+$(".group-item").on("click", "textarea", function() {
     var text = $(this).text().trim();
 
     var textInput = $("<textarea>").addClass(".group-item").val(text);
@@ -29,24 +31,21 @@ $(".group-item").on("click", "p", function() {
     textInput.trigger("focus");
 });
 
-localStorage.setItem("Input", "#value1");
+var getInput = localStorage.setItem("task", task[0]);
 
-var savedData = localStorage.getItem("Input");
+var savedData = localStorage.getItem("getInput");
 
 // event listener call for save buttons
 $(".btn-save").click(function() {
-    var taskData = $("#value1").val();
-    var taskData = $("#value2").val();
-    var taskData = $("#value3").val()
-    var taskData = $("#value4").val();
-    var taskData = $("#value5").val();
-    var taskData = $("#value6").val();
-    var taskData = $("#value7").val();
+  
+
     console.log(".btn-save");
 });
 
 
 
+
+// ex: for first valueid: $("#value0").val("walk the dog");
 
 
 
