@@ -48,6 +48,10 @@ $(".group-item").on("click", "p", function() {
     textInput.trigger("focus");
 });
 
+$("#btn-save").click(function() {
+    alert("Hey there!");
+});
+
 
 
 
