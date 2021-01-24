@@ -25,22 +25,22 @@ var ItemEl = $("<div>").addClass("group-item");
 $(".group-item").on("click", "textarea", function() {
     var text = $(this).text().trim();
 
-    var textInput = $("<textarea>").addClass(".group-item").val(text);
+    var textInput = $("<textarea>").addClass("task").val(text);
     $(this).replaceWith(textInput);
-
     textInput.trigger("focus");
 });
 
-var getInput = localStorage.setItem("task", task[0]);
+var getInput = localStorage.setItem("task", task);
 
 var savedData = localStorage.getItem("getInput");
 
 // event listener call for save buttons
 $(".btn-save").click(function() {
-  
+  $("task").siblings().parent();
 
-    console.log(".btn-save");
+    console.log($((this)));
 });
+
 
 
 
