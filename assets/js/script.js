@@ -30,9 +30,8 @@ $(".group-item").on("click", "textarea", function() {
     textInput.trigger("focus");
 });
 
-var getInput = localStorage.setItem("task", task);
 
-var savedData = localStorage.getItem("getInput");
+
 
 // event listener call for save buttons
 $(".btn-save").click(function() {
@@ -41,6 +40,9 @@ $(".btn-save").click(function() {
     console.log($((this)));
 });
 
+var getInput = localStorage.setItem("task", task);
+
+var savedData = localStorage.getItem("task");
 
 
 
