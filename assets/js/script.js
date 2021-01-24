@@ -1,4 +1,4 @@
-var items= {};
+var task= {};
 
 
 // elements that make up an item
@@ -9,11 +9,16 @@ var updateItem= function(taskEl) {
 
 };
 
-var loadItem = function() {
-    items = JSON.parse(localStorage.getItem("items"));
+// local storage call to save whatever is in the class called 'task'
 
-    if (!items) {
-        items = {
+let saveItems = 'task';
+localStorage.setItem(saveItems, 'task');
+
+
+
+
+    if (!task) {
+        tasks = {
             item1: [],
             item2: [],
             item3: [],
@@ -26,19 +31,21 @@ var loadItem = function() {
         };
     }
 
-    $.each(items, function(list, arr) {
+    $.each(task, function(list, arr) {
         console.log(list, arr);
 
         arr.forEach(function(item) {
             updateItem(item.text, item.time, list);
         });
     });
-};
 
-var saveItems = function() {
-    localStorage.setItem("items", JSON.stringify(items));
-}
 
+    // localStorage call to get whatever info is in the 'task' class
+
+let myItem = localStorage.getItem(saveItems);
+
+
+// jquery that tells the 'task' input section to change the text when it's clicked
 $(".group-item").on("click", "p", function() {
     var text = $(this).text().trim();
 
@@ -48,8 +55,9 @@ $(".group-item").on("click", "p", function() {
     textInput.trigger("focus");
 });
 
-$("#btn-save").click(function() {
-    alert("Hey there!");
+// event listener call for save buttons
+$(".btn-save").click(function() {
+    
 });
 
 
