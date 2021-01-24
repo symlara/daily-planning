@@ -100,3 +100,11 @@ textarea{
 span {
  align-items: right;
 }
+
+#date {
+  font-size: 20px;
+}
+
+.input-value {
+  display: none;
+}
